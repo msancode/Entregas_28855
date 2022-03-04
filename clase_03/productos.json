@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Remera",
+    "price": 6241,
+    "thumbnail": "./rura/hacia/imagen/ficticia",
+    "id": 1645810095988
+  },
+  {
+    "title": "Remera",
+    "price": 3754,
+    "thumbnail": "./rura/hacia/imagen/ficticia",
+    "id": 1645810107597
+  },
+  {
+    "title": "Remera",
+    "price": 3382,
+    "thumbnail": "./rura/hacia/imagen/ficticia",
+    "id": 1645810109030
+  },
+  {
+    "title": "Remera",
+    "price": 3757,
+    "thumbnail": "./rura/hacia/imagen/ficticia",
+    "id": 1645810109655
+  }
+]
