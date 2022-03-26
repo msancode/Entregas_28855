@@ -1,0 +1,35 @@
+<h1>Agregar Productos con websocket.io</h1>
+<fieldset>
+  <form action="/productos" method="post" onSubmit="addProd(); return false">
+    <label for="title"><b>Nombre</b></label>
+    <input type="text" id="title" name="title" />
+
+    <label for="price"><b>Precio</b></label>
+    <input type="number" id="price" name="price" />
+
+    <label for="img"><b>Imagen</b></label>
+    <input type="text" id="img" name="img" />
+
+    <button class="btn" type="submit">AGREGAR</button>
+
+  </form>
+</fieldset>
+<fieldset>
+  <h2>Productos</h2>
+  <ul id="products"></ul>
+</fieldset>
+
+<script>
+
+  socket.on("messageBack2", (data) => { console.log("Recibida desde backend: ",
+  data); let innerText = ""; data.map((message) => { innerText += ` <li>
+  <div>Title: ${message.title}</div> <div>Price: ${message.price}</div>
+  <div>Image: ${message.image}</div> </li> <br>`; });
+  document.getElementById("products").innerHTML = innerText; }); function
+  addProd() { const title = document.getElementById("title").value; const price
+  = document.getElementById("price").value; const image =
+  document.getElementById("img").value; socket.emit("messageFrontProd", { title,
+  price, image }); document.getElementById("price").value = "";
+  document.getElementById("img").value = ""; }
+
+</script>

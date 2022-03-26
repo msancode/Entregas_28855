@@ -1,0 +1,25 @@
+<h1>Chat con websocket.io</h1>
+<fieldset>
+  <form onSubmit="addMessage(); return false">
+    Nombre
+    <input type="text" name="author" id="author" />
+    Mensaje
+    <input type="text" name="message" id="message" />
+    <button class="btn" id="send" type="submit">Enviar</button>
+  </form>
+</fieldset>
+<fieldset>
+  <h2>Mensajes</h2>
+  <ul id="messages"></ul>
+</fieldset>
+<script>
+
+  socket.on("messageBack", (data) => { console.log("Recibida desde backend: ",
+  data); let innerText = ""; data.map((i) => { innerText += ` <li> <div>Autor:
+  ${i.author}</div> <div>Mensaje: ${i.text}</div> </li> `; });
+  document.getElementById("messages").innerHTML = innerText; }); function
+  addMessage() { const author = document.getElementById("author").value; const
+  text = document.getElementById("message").value; socket.emit("messageFront", {
+  author, text, }); document.getElementById("message").value = ""; }
+
+</script>
