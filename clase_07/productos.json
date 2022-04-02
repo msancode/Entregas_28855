@@ -1,0 +1,20 @@
+[
+  {
+    "id": "edc8890d-172d-4f77-8330-dcc9adbc8057",
+    "timestamp": 1648862697754,
+    "nombre": "cosa 1",
+    "descripcion": "esto es una cosa",
+    "codigo": "kajsd76tgs",
+    "foto": "ruta/hacia/foto",
+    "precio": 6871
+  },
+  {
+    "id": "c820f3ab-0f70-49e5-8166-7ebbc6c7187a",
+    "timestamp": 1648862697754,
+    "nombre": "cosa 2",
+    "descripcion": "esto es una cosa 2",
+    "codigo": "fttsd7s3tgs",
+    "foto": "ruta/hacia/foto",
+    "precio": 9042
+  }
+]
